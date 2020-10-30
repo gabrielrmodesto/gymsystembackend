@@ -1,2 +1,2 @@
-# gymsystembackend
+# Gym system
 Backend gym system
