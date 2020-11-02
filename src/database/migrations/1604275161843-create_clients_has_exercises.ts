@@ -51,8 +51,8 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 					{
 						name: "fk_clients_has_exercises_quantity_exercise1",
 						columnNames: ["quantity_exercise_id_quantity_exercise"],
-						referencedTableName: "exercise_series_quantity",
-						referencedColumnNames: ["id_exercise_series_quantity"],
+						referencedTableName: "exercises_series_quantity",
+						referencedColumnNames: ["id_exercises_series_quantity"],
 						onUpdate: "CASCADE",
 						onDelete: "CASCADE",
 					},
