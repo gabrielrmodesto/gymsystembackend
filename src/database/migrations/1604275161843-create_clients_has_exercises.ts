@@ -1,8 +1,73 @@
-import {MigrationInterface, QueryRunner} from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class createClientsHasExercises1604275161843 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
+		await queryRunner.createTable(
+			new Table({
+				name: "clients_has_exercises",
+				columns: [
+					{
+						name: "id_clients_has_exercises",
+						type: "integer",
+						isPrimary: true,
+						unsigned: true,
+						isGenerated: true,
+						generationStrategy: "increment",
+					},
+					{
+						name: "clients_id_clients",
+						type: "integer",
+					},
+					{
+						name: "exercises_id_exercises",
+						type: "integer",
+					},
+					{
+						name: "quantity_exercise_id_quantity_exercise",
+						type: "integer",
+					},
+					{
+						name: "exercises_quantity_number_id_exercises_quantity_number",
+						type: "integer",
+					},
+				],
+				foreignKeys: [
+					{
+						name: "ClientID",
+						columnNames: ["clients_id_clients"],
+						referencedTableName: "clients",
+						referencedColumnNames: ["id_clients"],
+						onUpdate: "CASCADE",
+						onDelete: "CASCADE",
+					},
+					{
+						name: "ExerciseID",
+						columnNames: ["exercises_id_exercises"],
+						referencedTableName: "exercises",
+						referencedColumnNames: ["id_exercises"],
+						onUpdate: "CASCADE",
+						onDelete: "CASCADE",
+					},
+					{
+						name: "QuantityExerciseNumberID",
+						columnNames: ["quantity_exercise_id_quantity_exercise"],
+						referencedTableName: "exercise_series_quantity",
+						referencedColumnNames: ["id_exercise_series_quantity"],
+						onUpdate: "CASCADE",
+						onDelete: "CASCADE",
+					},
+					{
+						name: "ExerciseQuantityNumberID",
+						columnNames: ["exercises_quantity_number_id_exercises_quantity_number"],
+						referencedTableName: "exercises_quantity_number",
+						referencedColumnNames: ["id_exercises_quantity_number"],
+						onUpdate: "CASCADE",
+						onDelete: "CASCADE",
+					},
+				],
+			})
+		);
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
