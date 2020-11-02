@@ -11,7 +11,6 @@ export class createDaysOfWeekHasClients1604275174948 implements MigrationInterfa
 						name: "id_days_of_week_has_clients",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},
@@ -30,13 +29,13 @@ export class createDaysOfWeekHasClients1604275174948 implements MigrationInterfa
 				],
 				foreignKeys: [
 					{
-						name: "DaysOfWeekID",
+						name: "fk_days_of_week_has_clients_days_of_week1",
 						columnNames: ["days_of_week_id_days_of_week"],
 						referencedTableName: "days_of_week",
 						referencedColumnNames: ["id_days_of_week"],
 					},
 					{
-						name: "ClientID",
+						name: "fk_days_of_week_has_clients_clients1",
 						columnNames: ["clients_id_clients"],
 						referencedTableName: "clients",
 						referencedColumnNames: ["id_clients"],
@@ -44,7 +43,7 @@ export class createDaysOfWeekHasClients1604275174948 implements MigrationInterfa
 						onDelete: "CASCADE",
 					},
 					{
-						name: "HourOfExerciseID",
+						name: "fk_days_of_week_has_clients_hour_of_exercise1",
 						columnNames: ["hour_of_exercise_id_hour_of_exercise"],
 						referencedTableName: "hour_of_exercise",
 						referencedColumnNames: ["id_hour_of_exercise"],

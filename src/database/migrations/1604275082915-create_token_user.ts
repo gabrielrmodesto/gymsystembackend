@@ -10,7 +10,6 @@ export class createTokenUser1604275082915 implements MigrationInterface {
 					{
 						name: "id_token_user",
 						type: "integer",
-						unsigned: true,
 						isPrimary: true,
 						isGenerated: true,
 						generationStrategy: "increment",
@@ -30,7 +29,7 @@ export class createTokenUser1604275082915 implements MigrationInterface {
 				],
 				foreignKeys: [
 					{
-						name: "UserID",
+						name: "fk_token_user_user1",
 						columnNames: ["user_id_user"],
 						referencedTableName: "user",
 						referencedColumnNames: ["id_user"],

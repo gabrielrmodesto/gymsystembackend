@@ -10,7 +10,6 @@ export class createClients1604275105335 implements MigrationInterface {
 						name: "id_clients",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},

@@ -11,7 +11,6 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 						name: "id_clients_has_exercises",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},
@@ -34,7 +33,7 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 				],
 				foreignKeys: [
 					{
-						name: "ClientID",
+						name: "fk_clients_has_exercises_clients1",
 						columnNames: ["clients_id_clients"],
 						referencedTableName: "clients",
 						referencedColumnNames: ["id_clients"],
@@ -42,7 +41,7 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 						onDelete: "CASCADE",
 					},
 					{
-						name: "ExerciseID",
+						name: "fk_clients_has_exercises_exercises1",
 						columnNames: ["exercises_id_exercises"],
 						referencedTableName: "exercises",
 						referencedColumnNames: ["id_exercises"],
@@ -50,7 +49,7 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 						onDelete: "CASCADE",
 					},
 					{
-						name: "QuantityExerciseNumberID",
+						name: "fk_clients_has_exercises_quantity_exercise1",
 						columnNames: ["quantity_exercise_id_quantity_exercise"],
 						referencedTableName: "exercise_series_quantity",
 						referencedColumnNames: ["id_exercise_series_quantity"],
@@ -58,7 +57,7 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 						onDelete: "CASCADE",
 					},
 					{
-						name: "ExerciseQuantityNumberID",
+						name: "fk_clients_has_exercises_exercises_quantity_number1",
 						columnNames: ["exercises_quantity_number_id_exercises_quantity_number"],
 						referencedTableName: "exercises_quantity_number",
 						referencedColumnNames: ["id_exercises_quantity_number"],

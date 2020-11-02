@@ -9,7 +9,6 @@ export class createVerifyCode1604275073722 implements MigrationInterface {
 					{
 						name: "id_verify_code",
 						type: "integer",
-						unsigned: true,
 						isPrimary: true,
 						isGenerated: true,
 						generationStrategy: "increment",
@@ -29,7 +28,7 @@ export class createVerifyCode1604275073722 implements MigrationInterface {
 				],
 				foreignKeys: [
 					{
-						name: "UserID",
+						name: "fk_verify_code_user1",
 						columnNames: ["user_id_user"],
 						referencedTableName: "user",
 						referencedColumnNames: ["id_user"],

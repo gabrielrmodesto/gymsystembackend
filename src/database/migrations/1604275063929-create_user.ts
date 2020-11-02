@@ -9,7 +9,6 @@ export class createUser1604275063929 implements MigrationInterface {
 					{
 						name: "id_user",
 						type: "integer",
-						unsigned: true,
 						isPrimary: true,
 						isGenerated: true,
 						generationStrategy: "increment",
@@ -21,6 +20,7 @@ export class createUser1604275063929 implements MigrationInterface {
 					{
 						name: "login",
 						type: "varchar",
+						isUnique: true,
 					},
 					{
 						name: "password",
@@ -33,7 +33,7 @@ export class createUser1604275063929 implements MigrationInterface {
 				],
 				foreignKeys: [
 					{
-						name: "TypeUserID",
+						name: "fk_user_type_user",
 						columnNames: ["type_user_id_type_user"],
 						referencedTableName: "type_user",
 						referencedColumnNames: ["id_type_user"],

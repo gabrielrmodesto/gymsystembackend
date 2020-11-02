@@ -10,7 +10,6 @@ export class createRefreshToken1604275088041 implements MigrationInterface {
 					{
 						name: "id_refresh_token",
 						type: "integer",
-						unsigned: true,
 						isPrimary: true,
 						isGenerated: true,
 						generationStrategy: "increment",
@@ -24,13 +23,13 @@ export class createRefreshToken1604275088041 implements MigrationInterface {
 						type: "timestamp",
 					},
 					{
-						name: "user_id_user",
+						name: "token_user_id_token_user",
 						type: "integer",
 					},
 				],
 				foreignKeys: [
 					{
-						name: "TokenUserID",
+						name: "fk_refresh_token_token_user1",
 						columnNames: ["token_user_id_token_user"],
 						referencedTableName: "token_user",
 						referencedColumnNames: ["id_token_user"],

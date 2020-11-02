@@ -11,7 +11,6 @@ export class createExercisesSeriesQuantity1604275126142 implements MigrationInte
 						name: "id_exercises_series_quantity",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},

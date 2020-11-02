@@ -11,7 +11,6 @@ export class createDaysOfWeek1604275111662 implements MigrationInterface {
 						name: "id_days_of_week",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},

@@ -11,7 +11,6 @@ export class createExercises1604275140450 implements MigrationInterface {
 						name: "id_exercises",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},

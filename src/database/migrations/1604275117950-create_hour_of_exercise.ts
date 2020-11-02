@@ -11,7 +11,6 @@ export class createHourOfExercise1604275117950 implements MigrationInterface {
 						name: "id_hour_of_exercise",
 						type: "integer",
 						isPrimary: true,
-						unsigned: true,
 						isGenerated: true,
 						generationStrategy: "increment",
 					},
