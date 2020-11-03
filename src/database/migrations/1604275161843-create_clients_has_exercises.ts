@@ -23,7 +23,7 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 						type: "integer",
 					},
 					{
-						name: "quantity_exercise_id_quantity_exercise",
+						name: "exercise_series_quantity_id_exercises_series_quantity",
 						type: "integer",
 					},
 					{
@@ -50,7 +50,7 @@ export class createClientsHasExercises1604275161843 implements MigrationInterfac
 					},
 					{
 						name: "fk_clients_has_exercises_quantity_exercise1",
-						columnNames: ["quantity_exercise_id_quantity_exercise"],
+						columnNames: ["exercise_series_quantity_id_exercises_series_quantity"],
 						referencedTableName: "exercises_series_quantity",
 						referencedColumnNames: ["id_exercises_series_quantity"],
 						onUpdate: "CASCADE",
