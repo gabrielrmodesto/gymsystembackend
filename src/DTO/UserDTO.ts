@@ -1,4 +1,4 @@
-export class IUserDTO{
+export default interface IUserDTO{
 	name: string;
 	login: string;
 	password: string;
