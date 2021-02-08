@@ -1,10 +1,10 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity("clients")
+@Entity('clients')
 export default class Clients {
-	@PrimaryGeneratedColumn("increment")
-	id_clients: number;
+  @PrimaryGeneratedColumn('increment')
+  id_clients: number;
 
-	@Column()
-	name: string;
+  @Column()
+  name: string;
 }

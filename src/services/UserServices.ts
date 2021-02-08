@@ -1,7 +1,7 @@
-import {Request, Response} from 'express';
+import { Request, Response } from 'express';
 
-export default{
-	index(request: Request, response: Response){
-		return response.json("Hello");
-	}
-}
+export default {
+  index(request: Request, response: Response) {
+    return response.json('Hello');
+  },
+};

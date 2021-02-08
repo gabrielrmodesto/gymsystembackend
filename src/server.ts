@@ -1,6 +1,6 @@
 import express from 'express';
-import "./database/connection";
-import routes from "./routes";
+import './database/connection';
+import routes from './routes';
 import cors from 'cors';
 
 const app = express();
